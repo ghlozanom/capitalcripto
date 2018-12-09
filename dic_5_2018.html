@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="bundle.css">
+
+    <title>Capital Cripto</title>
+</head>
+<body class="mdc-typography" >
+    
+    <header class="mdc-top-app-bar">
+            <div class="mdc-top-app-bar__row">
+                <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+                <a href="#" class="material-icons mdc-top-app-bar__navigation-icon">menu</a>
+                <span class="mdc-top-app-bar__title">Blog</span>
+                </section>
+            </div>
+    </header>
+
+    <div class="mainContent mdc-top-app-bar--fixed-adjust">
+
+        <div class="mdc-typography--headline3">Short nube japonesa</div>
+
+        <div class="mdc-typography--caption">Diciembre 5 de 2018</div>
+
+        <img class="image" src="./images/ichimoku.png" alt="Ichimoku" width="640">
+
+        <div class="blog-content">
+            <div>Esto es basado en el sistema de trading que se explica en <a href="https://youtu.be/Rwfbu_JSHjc">este video</a>.
+            Es un sistema basado en el Ichimoku. Dado que se bitcoin esta bajando, esto es un short. Se cumplieron las siguientes condiciones
+            dadas en el video:
+            </div>
+            <ol>
+                <li>El precio debe encontrarse por debajo de la nube: Si, el precio era USD3794</li>
+                <li>El tenkam debe encontrarse por debajo de la nube: Si (se ve en azul) (TODO: entrada con analisis de Ichimoku)</li>
+                <li>El precio debe cruzar hacia abajo el tenkam, pero antes de 6 velas: de este no estoy completamente seguro</li>
+                <li>La vela de entrada sera la que abra por encima del tenkam y cierre bajo este, y entramos a su cierre. Esto lo hice un poco tarde</li>
+                <li>Si la vela senal esta tocando la nube, la siguiente vela que cierra por debajo del tenkam y sin tocar la nube sera la nueva
+                    senal, y esto a menudo sera en la siguiente vela: La vela no toca la nube.
+                </li>
+                <li>El objetivo 1 se situa a 60 pips, donde cerramos la mitad de la posicion y movemos el stop a breakeven. Realmente no tengo 
+                    claro si los pips se usarian con bitcoin. Igual pongo la mitad del cierre de la posicion en USD 3415 (10%).
+                </li>
+                <li>El resto se gestiona como "trailing", y la primera vela que abra y cierre por ecima del tenkam marcara el cierre de
+                     la operacion. Ya veremos</li>
+                <li>Si ya se ha cerrado la mitad de la operacion, al no quedar riesgo abierto, se puede entrar en una nueva senal si esta 
+                    se da. Faltaria aclarar un poco mas esto.
+                </li>                     
+            </ol>
+            <div>
+                La estrategia: recomprar la mitad en 3415. Si se ejecuta, entonces actualizar la recompra de la otra mitad a 3794. Inicialmente hay 
+                un stop-loss en 4299. Nota: Tengo que retirar el stop loss por que no alcanzo, si es necesario volver a ponerlo.
+            </div>
+        </div>
+
+    </div>
+
+    <script src="bundle.js" async></script>
+</body>
+</html>
