@@ -2,6 +2,8 @@
 
 @import "@material/typography/mdc-typography";
 @import "@material/top-app-bar/mdc-top-app-bar";
+@import "@material/card/mdc-card";
+@import "@material/button/mdc-button";
 
 .blog-content {
     margin-top: 50px;
@@ -24,3 +26,33 @@
     margin-right: auto;
     display: block;
 }
+
+.my-card {
+    height: 500px;
+    width: 350px;
+    @include mdc-ripple-surface;
+    @include mdc-ripple-radius-bounded;
+    @include mdc-states;    
+    overflow: hidden;
+}
+
+.short__media {
+    background-image: url("./images/ichimoku.png");
+} 
+
+.blog_title {
+    @include mdc-typography(headline3);
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.link {
+    text-decoration: inherit; /* no underline */
+    cursor: pointer;
+}
+
+/* visited link */
+.link:visited {
+    color: green;
+}
+  
